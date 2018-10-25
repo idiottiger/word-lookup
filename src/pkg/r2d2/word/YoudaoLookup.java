@@ -32,7 +32,6 @@ public class YoudaoLookup implements ILookup {
                 Elements items = pronounce.getElementsByClass("pronounce");
                 for (Element item : items) {
                     Pronounce pron = new Pronounce();
-                    pron.name = item.ownText();
                     Elements phoneticList = item.getElementsByClass("phonetic");
                     for (Element phonetic : phoneticList) {
                         pron.pronounce = phonetic.ownText();
